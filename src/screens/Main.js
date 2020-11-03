@@ -12,13 +12,15 @@ const BottomTab = createBottomTabNavigator()
 import Login from './Login'
 import SignUp from './SignUp'
 import ForgotPassword from './ForgotPassword'
+import ResetPassword from './ResetPassword'
+import Home from './Home'
 export default function App() {
     const auth = useSelector(state=>state.auth)
   return (
     <NavigationContainer>
         {!auth.isLogin ? (
             <Stack.Navigator>
-            <Stack.Screen options={{headerShown:false}} name="Login" component={ForgotPassword}/>
+            <Stack.Screen options={{headerShown:false}} name="Login" component={Home}/>
         </Stack.Navigator>
         ):""}
     </NavigationContainer>
