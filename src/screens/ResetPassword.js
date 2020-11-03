@@ -17,25 +17,25 @@ export default function SignUp() {
       <Content style={{paddingLeft: 10, paddingRight: 10}}>
         <Form>
           <View>
-            <Text style={styles.loginText}>Login</Text>
+            <Text style={styles.loginText}>Reset Password</Text>
+          </View>
+          <View style={{marginBottom:20}}>
+              <Text style={{color:"red"}}>You need to change your password to activate your account</Text>
           </View>
           <View style={styles.paper}>
             <Item style={styles.formInput} floatingLabel>
-              <Label>Email</Label>
-              <Input placeholder="Email"  />
+              <Label>New Password</Label>
+              <Input placeholder="New Password"  secureTextEntry/>
             </Item>
           </View>
           <View style={styles.paper}>
             <Item style={styles.formInput} floatingLabel>
-              <Label>Password</Label>
-              <Input placeholder="Password" />
+              <Label>Confirmation New Password</Label>
+              <Input placeholder="Confirmation New Password" />
             </Item>
-          </View>
-          <View style={{alignSelf:"flex-end"}}>
-            <Text>Forgot your password?</Text>
           </View>
           <Button style={styles.btnSignUp} block>
-            <Text style={styles.btnText}>Login</Text>
+            <Text style={styles.btnText}>Reset Password</Text>
           </Button>
         </Form>
       </Content>
@@ -61,12 +61,12 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 17,
     color: 'white',
-    textTransform: 'uppercase',
+    textTransform:"capitalize"
   },
   loginText: {
     fontSize: 35,
     fontWeight: 'bold',
-    marginBottom:80
+    marginBottom:80,
   },
   formInput: {
    borderColor: 'transparent',
