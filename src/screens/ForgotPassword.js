@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Container, Form, Item, Content, Text, Input, Label} from 'native-base';
+import {Container, Form, Item, Content, Text, Input, Label, Button} from 'native-base';
 
 export default function ForgotPassword() {
   return (
@@ -22,6 +22,9 @@ export default function ForgotPassword() {
               <Input placeholder="Email" />
             </Item>
           </View>
+          <Button style={styles.btnSend} block>
+              <Text>Send</Text>
+          </Button>
         </Form>
       </Content>
     </Container>
@@ -44,10 +47,16 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     elevation: 1.5,
     marginBottom: 10,
+    marginTop:20
   },
   headerText:{
     fontSize: 35,
     fontWeight: 'bold',
     marginBottom:80
+  },
+  btnSend:{
+      borderRadius:35,
+      backgroundColor:"#3285A8",
+      marginTop:60
   }
 });
