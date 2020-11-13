@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
 const authState = {
-    isLogin:false,
+    isLogin:true,
     token:'',
     isLoading:false,
     isError:false,
