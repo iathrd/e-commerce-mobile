@@ -1,25 +1,28 @@
 import React from 'react';
-import {View, ScrollView, Image, StyleSheet} from 'react-native';
+import {View, ScrollView, Image, StyleSheet, ImageBackground} from 'react-native';
 import {
   Container,
   Header,
   Content,
   Card,
   CardItem,
-  Thumbnail,
   Text,
-  Button,
-  Icon,
-  Left,
-  Body,
-  Right,
+
 } from 'native-base';
 
 export default function Home() {
   return (
-    <Container style={{paddingLeft: 10, paddingRight: 10}}>
-      <Content>
-
+    <Container>
+      <Content style={{backgroundColor:"#f5f5f5"}}>
+      <View style={{position:"relative"}}>
+        <View style={{position:"absolute", zIndex:2,width:"100%",height:"100%",backgroundColor:"rgba(0,0,0,0.20)"}}>
+          <Text style={{fontWeight:"bold",fontSize:25,color:"white",marginTop:140,marginLeft:10}}>Street clothes</Text>
+        </View>
+        <View>
+        <Image source={require('../assets/img/Realme-3-Pro-3.jpg')} style={{width:"100%",height:200,resizeMode:"stretch"}}/>
+        </View>
+      </View>
+      <View style={{paddingLeft: 10, paddingRight: 20}}>
         <View
           style={{
             display: 'flex',
@@ -37,10 +40,11 @@ export default function Home() {
           <View style={{elevation: 0}}>
             <Card
               style={{
-                backgroundColor: 'black',
                 borderRadius: 10,
                 elevation: 0,
-                borderColor: 'white',
+                borderColor: '#f5f5f5',
+                marginRight:10
+                
               }}>
               <CardItem style={{borderRadius: 10}} cardBody>
                 <View style={{position: 'relative'}}>
@@ -62,70 +66,130 @@ export default function Home() {
                   />
                 </View>
               </CardItem>
-              <CardItem style={{paddingLeft: 0}}>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
                 <View style={{display:"flex",flexDirection:"column"}}>
                   <Text>OVS</Text>
                   <Text>Blouse</Text>
                   <Text>30$</Text>
                 </View>
+              </CardItem>
+            </Card>
+          </View>
+
+          <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
                 
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
+              </CardItem>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
               </CardItem>
             </Card>
           </View>
-          <View>
-            <Card style={{elevation: 4}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
+
+          <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
+                
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
               </CardItem>
-              <CardItem>
-                <Text>PPPP</Text>
-              </CardItem>
-            </Card>
-          </View>
-          <View>
-            <Card style={{elevation: 4}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
-              </CardItem>
-              <CardItem>
-                <Text>PPPP</Text>
-              </CardItem>
-            </Card>
-          </View>
-          <View>
-            <Card style={{elevation: 4}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
-              </CardItem>
-              <CardItem>
-                <Text>PPPP</Text>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
               </CardItem>
             </Card>
           </View>
+
+          <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
+                
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
+              </CardItem>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
+              </CardItem>
+            </Card>
+          </View>
+          
         </ScrollView>
 
         <View
@@ -143,79 +207,160 @@ export default function Home() {
           <Text>You've never seen it before</Text>
         </View>
         <ScrollView horizontal={true}>
-          <View>
-            <Card style={{elevation: 4, marginRight: 10}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
+        <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
+                marginRight:10
+                
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
               </CardItem>
-              <CardItem>
-                <Text>PPPP</Text>
-              </CardItem>
-            </Card>
-          </View>
-          <View>
-            <Card style={{elevation: 4}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
-              </CardItem>
-              <CardItem style={{paddingLeft: 0}}>
-                <Text>PPPP</Text>
-              </CardItem>
-            </Card>
-          </View>
-          <View>
-            <Card style={{elevation: 4}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
-              </CardItem>
-              <CardItem>
-                <Text>PPPP</Text>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
               </CardItem>
             </Card>
           </View>
-          <View>
-            <Card style={{elevation: 4}}>
-              <CardItem cardBody>
-                <Image
-                  source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                  style={{
-                    height: 200,
-                    width: 150,
-                    flex: 1,
-                    resizeMode: 'cover',
-                  }}
-                />
+
+          <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
+                
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
               </CardItem>
-              <CardItem>
-                <Text>PPPP</Text>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
+              </CardItem>
+            </Card>
+          </View>
+
+          <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
+                
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
+              </CardItem>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
+              </CardItem>
+            </Card>
+          </View>
+
+          <View style={{elevation: 0}}>
+            <Card
+              style={{
+                borderRadius: 10,
+                elevation: 0,
+                borderColor: '#f5f5f5',
+                
+              }}>
+              <CardItem style={{borderRadius: 10}} cardBody>
+                <View style={{position: 'relative'}}>
+                  <View style={styles.imageLabel}>
+                    <Text style={{color: 'white', fontWeight: 'bold'}}>
+                      New
+                    </Text>
+                  </View>
+                  <Image
+                    source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                    style={{
+                      height: 200,
+                      width: 150,
+                      flex: 1,
+                      resizeMode: 'cover',
+                      borderTopLeftRadius: 10,
+                      borderTopRightRadius: 10,
+                    }}
+                  />
+                </View>
+              </CardItem>
+              <CardItem style={{paddingLeft: 0,backgroundColor:"#f5f5f5"}}>
+                <View style={{display:"flex",flexDirection:"column"}}>
+                  <Text>OVS</Text>
+                  <Text>Blouse</Text>
+                  <Text>30$</Text>
+                </View>
               </CardItem>
             </Card>
           </View>
         </ScrollView>
+        </View>
       </Content>
     </Container>
   );
