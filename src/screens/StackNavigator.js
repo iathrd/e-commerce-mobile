@@ -10,6 +10,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Settings from './Settings';
 import OrderDetails from './OrderDetils';
 import ChangeAdress from './ChangeAdress';
+import AddAdress from './AddAdress';
 import {Button, Text} from 'native-base';
 
 const Stack = createStackNavigator();
@@ -103,6 +104,11 @@ export const AdressStack = () => {
           headerStyle: {backgroundColor: 'white'},
         }}
         component={ChangeAdress}
+      />
+      <Stack.Screen
+        name="AddAdress"
+        options={{headerTitleAlign: 'center', title: 'Adding Shipping Adress'}}
+        component={AddAdress}
       />
     </Stack.Navigator>
   );
