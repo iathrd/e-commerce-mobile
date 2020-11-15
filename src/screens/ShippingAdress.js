@@ -119,7 +119,7 @@ export default function ShippingAdress({navigation}) {
             </View>
           </View>
         </Card>
-        <Button block style={{borderRadius: 35, marginTop: 10}} bordered dark>
+        <Button onPress={()=>navigation.navigate('AddAdress')} block style={{borderRadius: 35, marginTop: 10}} bordered dark>
           <Text> Add New Address</Text>
         </Button>
       </Content>
