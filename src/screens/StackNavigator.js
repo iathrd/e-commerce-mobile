@@ -12,6 +12,7 @@ import OrderDetails from './OrderDetils';
 import ChangeAdress from './ChangeAdress';
 import AddAdress from './AddAdress';
 import OrderSucces from './SuccessOrder';
+import Category from './Category';
 import {Button, Text} from 'native-base';
 
 const Stack = createStackNavigator();
@@ -159,6 +160,24 @@ export const MyProfileStack = () => {
           ),
         }}
         component={Settings}
+      />
+    </Stack.Navigator>
+  );
+};
+
+export const ShopStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Category"
+        options={{
+          title: 'Categories',
+          headerTitleAlign: 'center',
+          headerRight: () => (
+            <Icon name="search" size={30} style={{marginRight: 10}} />
+          ),
+        }}
+        component={Category}
       />
     </Stack.Navigator>
   );
