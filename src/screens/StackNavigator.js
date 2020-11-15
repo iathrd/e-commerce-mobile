@@ -11,6 +11,7 @@ import Settings from './Settings';
 import OrderDetails from './OrderDetils';
 import ChangeAdress from './ChangeAdress';
 import AddAdress from './AddAdress';
+import OrderSucces from './SuccessOrder';
 import {Button, Text} from 'native-base';
 
 const Stack = createStackNavigator();
@@ -51,6 +52,11 @@ export const BagStack = () => {
         name="ChangeAdress"
         options={{headerTitle: 'Shipping Adress', headerTitleAlign: 'center'}}
         component={ShippingAdress}
+      />
+      <Stack.Screen
+        name="Success"
+        options={{headerShown: false}}
+        component={OrderSucces}
       />
     </Stack.Navigator>
   );
