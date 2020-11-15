@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -8,15 +7,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {useSelector} from 'react-redux';
 const BottomTab = createBottomTabNavigator();
 
-import Login from './Login';
-import SignUp from './SignUp';
-import ForgotPassword from './ForgotPassword';
 import ResetPassword from './ResetPassword';
-import Home from './Home';
 import Mybag from './MyBag';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {HomeStack, BagStack, MyProfileStack} from './StackNavigator';
-import Landing from './Landing';
+import {HomeStack, BagStack, MyProfileStack, ShopStack} from './StackNavigator';
 
 const Stack = createStackNavigator();
 
@@ -50,7 +44,7 @@ export default function App() {
               ),
             }}
             name="Shop"
-            component={Login}
+            component={ShopStack}
           />
           <BottomTab.Screen
             options={{
