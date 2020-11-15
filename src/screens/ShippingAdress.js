@@ -13,7 +13,7 @@ import {
 } from 'native-base';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default function ShippingAdress() {
+export default function ShippingAdress({navigation}) {
   return (
     <Container>
       <Content
@@ -55,7 +55,7 @@ export default function ShippingAdress() {
                   justifyContent: 'space-between',
                 }}>
                 <Text style={{fontWeight: 'bold'}}>Jane Doe</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate('ChangeAdress')}>
                   <Text style={{color: '#3CAEA4'}}>Change</Text>
                 </TouchableOpacity>
               </View>
