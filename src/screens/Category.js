@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, FlatList, SafeAreaView} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  FlatList,
+  SafeAreaView,
+  TouchableOpacity,
+} from 'react-native';
 import {Container, Content, Text, Button} from 'native-base';
 
 const DATA = [
@@ -33,11 +39,20 @@ const DATA = [
   },
 ];
 
-const Categories = ({data}) => {
-  return <Text style={styles.textCategory}>{data.title}</Text>;
+const Categories = ({data, navigation}) => {
+  return (
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('ListCategory', {
+          title: data.title,
+        })
+      }>
+      <Text style={styles.textCategory}>{data.title}</Text>
+    </TouchableOpacity>
+  );
 };
 
-export default function Category() {
+export default function Category({navigation}) {
   return (
     <Container>
       <Content style={styles.content}>
@@ -50,7 +65,9 @@ export default function Category() {
         <SafeAreaView style={{flex: 1}}>
           <FlatList
             data={DATA}
-            renderItem={({item}) => <Categories data={item} />}
+            renderItem={({item}) => (
+              <Categories navigation={navigation} data={item} />
+            )}
           />
         </SafeAreaView>
       </Content>
