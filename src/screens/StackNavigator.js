@@ -14,9 +14,29 @@ import AddAdress from './AddAdress';
 import OrderSucces from './SuccessOrder';
 import Category from './Category';
 import ListCategory from './ListCategory';
+import Filters from './Filters';
+import ProductDetails from './ProductDetails';
 import {Button, Text} from 'native-base';
 
 const Stack = createStackNavigator();
+
+export const ProductDetailsStacck = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="ProductDetails"
+        options={({route}) => ({
+          title: 'Short dress',
+          headerTitleAlign: 'center',
+          headerRight:()=>(
+            <Icon name="share" size={25} style={{marginRight:16}} />
+          )
+        })}
+        component={ProductDetails}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export const HomeStack = () => {
   return (
@@ -25,6 +45,11 @@ export const HomeStack = () => {
         options={{headerShown: false}}
         name="Home"
         component={Home}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="ProductDetails"
+        component={ProductDetailsStacck}
       />
     </Stack.Navigator>
   );
@@ -166,6 +191,18 @@ export const MyProfileStack = () => {
   );
 };
 
+export const FiltersStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Filters"
+        options={{title: 'Filters', headerTitleAlign: 'center'}}
+        component={Filters}
+      />
+    </Stack.Navigator>
+  );
+};
+
 export const ShopStack = ({route}) => {
   return (
     <Stack.Navigator>
@@ -193,6 +230,11 @@ export const ShopStack = ({route}) => {
           ),
         })}
         component={ListCategory}
+      />
+      <Stack.Screen
+        name="Filters"
+        options={{headerShown: false}}
+        component={FiltersStack}
       />
     </Stack.Navigator>
   );
