@@ -1,11 +1,19 @@
 import React from 'react';
-import {View, ScrollView, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  ScrollView,
+  StyleSheet,
+  Image,
+  StatusBar,
+  TouchableOpacity,
+} from 'react-native';
 import {Container, Content, Card, CardItem, Text} from 'native-base';
 
-export default function Home() {
+export default function Home({navigation}) {
   return (
     <Container>
       <Content style={styles.content}>
+        <StatusBar translucent backgroundColor="transparent" />
         <View style={styles.bannerView}>
           <View style={styles.textBannerView}>
             <Text style={styles.textBanner}>Street clothes</Text>
@@ -28,24 +36,27 @@ export default function Home() {
           <ScrollView horizontal={true}>
             <View style={styles.cardView}>
               <Card style={styles.card}>
-                <CardItem style={styles.cardItem} cardBody>
-                  <View style={styles.cardTextView}>
-                    <View style={styles.imageLabel}>
-                      <Text style={styles.cardText}>New</Text>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('ProductDetails')}>
+                  <CardItem style={styles.cardItem} cardBody>
+                    <View style={styles.cardTextView}>
+                      <View style={styles.imageLabel}>
+                        <Text style={styles.cardText}>New</Text>
+                      </View>
+                      <Image
+                        source={require('../assets/img/Realme-3-Pro-3.jpg')}
+                        style={styles.cardImage}
+                      />
                     </View>
-                    <Image
-                      source={require('../assets/img/Realme-3-Pro-3.jpg')}
-                      style={styles.cardImage}
-                    />
-                  </View>
-                </CardItem>
-                <CardItem style={styles.cardBody}>
-                  <View style={styles.cardBodyDisplay}>
-                    <Text>OVS</Text>
-                    <Text>Blouse</Text>
-                    <Text>30$</Text>
-                  </View>
-                </CardItem>
+                  </CardItem>
+                  <CardItem style={styles.cardBody}>
+                    <View style={styles.cardBodyDisplay}>
+                      <Text>OVS</Text>
+                      <Text>Blouse</Text>
+                      <Text>30$</Text>
+                    </View>
+                  </CardItem>
+                </TouchableOpacity>
               </Card>
             </View>
           </ScrollView>
