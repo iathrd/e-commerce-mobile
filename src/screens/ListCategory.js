@@ -1,25 +1,38 @@
 import React from 'react';
-import {View, Text, StatusBar, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import {Container, Content, Header, Card, CardItem, Body} from 'native-base';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default function ListCategory() {
+export default function ListCategory({navigation}) {
   return (
     <Container style={{backgroundColor: 'white'}}>
       <Header style={{backgroundColor: 'white', elevation: 4}}>
         <StatusBar translucent backgroundColor="grey" />
         <View style={styles.conView}>
-          <View style={styles.iconView}>
-            <Icon name="filter-variant" size={30} />
-            <Text style={styles.textIcon}>Filters</Text>
-          </View>
-          <View style={styles.iconView}>
-            <Icon name="swap-vertical" size={30} />
-            <Text style={styles.textIcon}>Price: lowest to hight</Text>
-          </View>
-          <View style={styles.iconView}>
-            <Icon name="view-list" size={30} />
-          </View>
+          <TouchableOpacity onPress={() => navigation.navigate('Filters')}>
+            <View style={styles.iconView}>
+              <Icon name="filter-variant" size={30} />
+              <Text style={styles.textIcon}>Filters</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.iconView}>
+              <Icon name="swap-vertical" size={30} />
+              <Text style={styles.textIcon}>Price: lowest to hight</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <View style={styles.iconView}>
+              <Icon name="view-list" size={30} />
+            </View>
+          </TouchableOpacity>
         </View>
       </Header>
       <Content style={styles.content}>
