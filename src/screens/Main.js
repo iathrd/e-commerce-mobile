@@ -27,12 +27,25 @@ export default function App() {
           />
         </Stack.Navigator>
       ) : (
-        <BottomTab.Navigator>
+        <BottomTab.Navigator
+          tabBarOptions={{
+            activeTintColor: '#DB3022',
+            inactiveTintColor: '#9b9b9b',
+            labelStyle: {
+              fontWeight: 'bold',
+              fontSize: 12,
+            },
+          }}>
           <BottomTab.Screen
             options={{
               tabBarIcon: ({size, color, focused}) => (
-                <Icon name="home-outline" size={30} color={color} />
+                <Icon
+                  name={focused ? 'home' : 'home-outline'}
+                  size={30}
+                  color="#DB3022"
+                />
               ),
+              tabBarLabel: 'Home',
             }}
             name="Home"
             component={HomeStack}
@@ -40,7 +53,11 @@ export default function App() {
           <BottomTab.Screen
             options={{
               tabBarIcon: ({size, color, focused}) => (
-                <Icon name="cart-outline" size={30} color={color} />
+                <Icon
+                  name={focused ? 'cart' : 'cart-outline'}
+                  size={30}
+                  color="#DB3022"
+                />
               ),
             }}
             name="Shop"
@@ -49,7 +66,11 @@ export default function App() {
           <BottomTab.Screen
             options={{
               tabBarIcon: ({size, color, focused}) => (
-                <Icon name="shopping-outline" size={30} color={color} />
+                <Icon
+                  name={focused ? 'shopping' : 'shopping-outline'}
+                  size={30}
+                  color="#DB3022"
+                />
               ),
             }}
             name="Bag"
@@ -58,7 +79,11 @@ export default function App() {
           <BottomTab.Screen
             options={{
               tabBarIcon: ({size, color, focused}) => (
-                <Icon name="heart-outline" size={30} color={color} />
+                <Icon
+                  name={focused ? 'heart' : 'heart-outline'}
+                  size={30}
+                  color="#DB3022"
+                />
               ),
             }}
             name="Favorit"
@@ -67,7 +92,11 @@ export default function App() {
           <BottomTab.Screen
             options={{
               tabBarIcon: ({size, color, focused}) => (
-                <Icon name="account-outline" size={30} color={color} />
+                <Icon
+                  name={focused ? 'account' : 'account-outline'}
+                  size={30}
+                  color="#DB3022"
+                />
               ),
             }}
             name="Profile"
